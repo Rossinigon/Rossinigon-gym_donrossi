@@ -1,0 +1,41 @@
+name: gym_donrossi
+description: "Aplicativo de alta performance para musculação e hipertrofia."
+publish_to: 'none'
+version: 3.14.0+1
+
+environment:
+  sdk: '>=3.13.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.5.1
+  shared_preferences: ^2.2.2
+  supabase_flutter: ^2.5.0
+  drift: ^2.14.0
+  sqlite3_flutter_libs: ^0.5.2
+  path_provider: ^2.1.2
+  path: ^1.9.0
+  in_app_purchase: ^3.2.0
+  file_picker: ^13.1.0
+  share_plus: ^13.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  drift_dev: ^2.14.0
+  build_runner: ^2.4.8 
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_icons:
+  image_path: "assets/images/logo_donrossi.png"
+  android: true
+  ios: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/videos/
+    - assets/data/
