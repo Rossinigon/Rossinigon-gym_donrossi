@@ -1,14 +1,8 @@
 workflows:
-  ios-release-workflow:
-    name: Gym Donrossi iOS Release
+  ios-release:
+    name: iOS Release Build
     max_build_duration: 60
     instance_type: mac_mini_m2
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - pattern: main
-          include: true
     environment:
       flutter: stable
       xcode: latest
@@ -16,8 +10,8 @@ workflows:
       - name: Install dependencies
         script: |
           flutter pub get
-      - name: Build iOS IPA (Release)
+      - name: Build ipa
         script: |
-          flutter build ipa --release
+          flutter build ipa --release --no-codesign
     artifacts:
       - build/ios/ipa/*.ipa
