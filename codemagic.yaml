@@ -10,7 +10,7 @@ workflows:
       - name: Install dependencies
         script: |
           flutter pub get
-      - name: Build iOS App
+      - name: Build IOS App
         script: |
           flutter build ios --release --no-codesign
       - name: Package .app into .ipa (Alternative)
@@ -20,6 +20,6 @@ workflows:
           mv Runner.app Payload/
           zip -r app.ipa Payload
           mkdir -p ../../../build/ios/ipa
-          mv app.ipa ../../../build/ios/ipa/gym_donrossi.ipabak -> mv app.ipa ../../../build/ios/ipa/gym_donrossi.ipa
+          mv app.ipa ../../../build/ios/ipa/gym_donrossi.ipa
     artifacts:
       - build/ios/ipa/*.ipa
